@@ -1,10 +1,10 @@
+<div id="res"></div>
 <script>
   /* marcusprogramador.github.io/quedalivre/?id=123 */
   /* https://developer.mozilla.org/en-US/docs/Web/API/URL */
   
   const parsedUrl = new URL(window.location.href);
   console.log(parsedUrl.searchParams.get("id")); // "123"
-  const element = document.querySelector(".my-div");
-  element.appendChild(parsedUrl.searchParams.get("id"));
+  const div = document.getElementById("res");
+  div.innerHTML = parsedUrl.searchParams.get("id"); 
 </script>
-<div class=".my-div"></div>
